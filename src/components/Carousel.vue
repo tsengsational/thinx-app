@@ -28,5 +28,15 @@
 </script>
 
 <style>
-
+  .carousel {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    margin-right: 14px;
+    padding-right: 28px;
+    height: 1024px;
+    display: flex;
+    flex-direction: column;
+    left: calc(50vw - 738px/2);
+  }
 </style>
