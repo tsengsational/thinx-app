@@ -1,6 +1,8 @@
 <template>
   <div class="product">
     <photo :photo="product.photo" :path="path" />
+    <a class="product-link" >Shop {{ product.name }}</a>
+    <span class="product-type">{{ product.type }} days</span>
   </div>
 </template>
 
