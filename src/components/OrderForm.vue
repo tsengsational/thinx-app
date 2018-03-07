@@ -1,5 +1,5 @@
 <template>
-  <form class="form">
+  <form class="order-form">
     <label for="color">color
       <input type="radio" name="color" value="black">
       <input type="radio" name="color" value="beige">
@@ -23,7 +23,7 @@
 
 <script>
   export default {
-    
+
   }
 </script>
 
