@@ -40,10 +40,10 @@
   }
 
   p {
-    font-family: $default_font;
-    letter-spacing: 2px;
-    line-height: 2;
-  }
+      font-family: $default_font;
+      letter-spacing: 2px;
+      line-height: 2;
+    }
   strong {
     font-family: $default_font;
     letter-spacing: 3px;
@@ -53,29 +53,57 @@
 
   .top {
     background-color: $bkg_color;
-    height: 95vh;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
   }
 
-  .top-text {
-
+  .top-text, .order-form-container {
+    padding: 0 5%;
   }
 
   .carousel-container {
     overflow: hidden;
-    height: 95vh;
-    width: 738px;
-    position: absolute;
-    left: calc( 50vw - (738px / 2));
+  }
+
+  .carousel-container.zoom {
+    overflow: visible;
   }
 
   .price {
     margin-bottom: 2rem;
   }
 
+  .top.zoom {
+    height: 100vh;
+    position: sticky;
+  }
+
+  .hidden {
+    display: none;
+  }
+
   @media (min-width: 600px) {
+    .carousel-container {
+      height: 95vh;
+      left: calc( 50vw - (738px / 2));
+      position: absolute;
+      width: 738px;
+    }
+
+    .carousel-container.zoom {
+      height: 100vh;
+      width: 100%;
+      left: 0;
+      position: sticky;
+    }
+
     .top-text, .order-form-container {
       position: absolute;
       z-index: 1;
+    }
+
+    .top {
+      height: 95vh;
     }
 
     .order-form-container {
