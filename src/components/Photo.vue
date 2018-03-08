@@ -18,5 +18,10 @@
 <style scoped>
 img {
   align-self: center;
+  max-height: 90vh;
+}
+
+.photo {
+  margin-bottom: 3rem;
 }
 </style>
