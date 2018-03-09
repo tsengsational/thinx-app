@@ -1,6 +1,6 @@
 module.exports = {
   baseUrl: './',
-  module: {
+  configureWebpack: config => {
     rules: [
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
