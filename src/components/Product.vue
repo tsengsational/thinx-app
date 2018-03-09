@@ -110,7 +110,7 @@ export default {
     }
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 1000px) {
     .product {
       height: 600px;
     }

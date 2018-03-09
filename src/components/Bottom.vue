@@ -54,7 +54,7 @@
 
 <style>
 
-  @media (min-width: 600px) {
+  @media (min-width: 1000px) {
     .grid {
       align-items: center;
       display: grid;

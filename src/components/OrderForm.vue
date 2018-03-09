@@ -286,7 +286,7 @@
     }
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 1000px) {
     label.quantity {
       padding-left: calc(50% - 33px);
     }

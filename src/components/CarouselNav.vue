@@ -58,7 +58,7 @@ export default {
     margin-bottom: 2rem;
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 1000px) {
     .carousel-nav {
       display: none;
     }

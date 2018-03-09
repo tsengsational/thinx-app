@@ -74,15 +74,18 @@
   }
 
   .top.zoom {
-    height: 100vh;
+    height: 1000vh;
+    width: 100vw;
     position: sticky;
+    overflow: hidden;
+    margin-bottom: 0;
   }
 
   .hidden {
     display: none;
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 1000px) {
     .carousel-container {
       height: 95vh;
       left: calc( 50vw - (738px / 2));

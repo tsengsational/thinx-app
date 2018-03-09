@@ -18,11 +18,10 @@ export default {
     }
   },
   created: function(){
-    console.log(this.index)
   },
   computed: {
     left: function() {
-      return "left: " + String(-this.zoomLeft) + "px;"
+      return "left: " + String(this.zoomLeft) + "px;"
     }
   }
 }
