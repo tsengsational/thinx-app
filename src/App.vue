@@ -18,7 +18,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+$bkg_color: #F8F8F8;
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -26,6 +28,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 0px;
+}
+
+body.zoom {
+  background-color: $bkg_color;
 }
 
 body {

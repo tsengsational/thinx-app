@@ -196,7 +196,7 @@
     position: absolute;
     top: 5px;
     right: 15px;
-    z-index: -1;
+    z-index: 0;
   }
 
   .size {
@@ -206,12 +206,12 @@
     font-size: 16px;
     font-weight: 600;
     padding-left: 15px;
-    padding-right: 15px;
     cursor: pointer;
     height: 34px;
     margin-bottom: .75rem;
     width: 100%;
     user-select: none;
+    z-index: 3;
     -ms-user-select: none;
     -moz-user-select: none;
     -moz-appearance: none;
@@ -265,7 +265,6 @@
     font-weight: 600;
     height: 34px;
     margin-bottom: 2rem;
-    padding-left: calc(50% - 33px);
     padding-top: 8px;
     position: relative;
     text-transform: lowercase;
@@ -284,6 +283,12 @@
     input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
       -webkit-appearance: none;
       margin: 0;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    label.quantity {
+      padding-left: calc(50% - 33px);
     }
   }
 
