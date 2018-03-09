@@ -107,6 +107,7 @@
 
     .top {
       height: 95vh;
+      padding-bottom: 0px;
     }
 
     .order-form-container {

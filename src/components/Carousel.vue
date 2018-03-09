@@ -50,7 +50,7 @@
       // calculate distance required to center .carousel
       this.windowWidth = window.innerWidth
       this.imageWidth = document.querySelector('.topPhoto>.photo>img').offsetWidth
-      let centerMove = String( (windowWidth - imageWidth) / 2 ) + 'px'
+      let centerMove = String( (this.windowWidth - this.imageWidth) / 2 ) + 'px'
       if (this.windowWidth <= 1000) {
         this.overrideStyle.left = centerMove
         this.overrideStyle.transition = "none"
@@ -62,10 +62,9 @@
         this.imageWidth
         this.windowWidth
         let index = payload.payload
-        let move = String((-imageWidth * index) + ( (windowWidth - imageWidth) / 2 )) + "px"
+        let move = String((-this.imageWidth * index) + ( (this.windowWidth - this.imageWidth) / 2 )) + "px"
         this.overrideStyle.left = move
         this.overrideStyle.transition = "left .3s"
-        console.log("carousel click", index, this.overrideStyle.left)
       },
       handleZoomClick: function(payload) {
         // toggle isZoom flag variable, hide all non-topPhoto elements, position scroll
