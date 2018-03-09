@@ -104,6 +104,9 @@ export default {
     @include fontstack();
     .product-link {
       font-weight: 600;
+      a {
+        color: $black;
+      }
     }
     .product-type {
       font-size: 12px;
