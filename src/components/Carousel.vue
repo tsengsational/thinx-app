@@ -51,7 +51,6 @@
       let centerImage = () => {
         this.imageWidth = document.querySelector('.topPhoto>.photo>img').offsetWidth
         this.windowWidth = window.innerWidth
-        console.log(this.imageWidth, this.windowWidth)
         let centerMove = String( (this.windowWidth - this.imageWidth) / 2 ) + 'px'
         if (this.windowWidth <= 1000) {
           this.overrideStyle.left = centerMove
@@ -62,14 +61,12 @@
         centerImage()
       })
       centerImage()
-      console.log(this.overrideStyle.left, this.overrideStyle.transition)
     },
     methods: {
       handleCarouselClick: function (payload) {
         // get index from clicked button, translate carousel by index * width of image
         this.imageWidth = document.querySelector('.topPhoto>.photo>img').offsetWidth
         this.windowWidth = window.innerWidth
-        console.log(this.imageWidth, this.windowWidth)
         let index = payload.payload
         let move = String((-this.imageWidth * index) + ( (this.windowWidth - this.imageWidth) / 2 )) + "px"
         this.overrideStyle.left = move
