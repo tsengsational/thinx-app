@@ -13,11 +13,8 @@ export default {
   methods: {
     zoom: function (e) {
       let payload = {event: e, index: this.index}
-      console.log(payload.index)
       this.handleZoomClick(payload)
     }
-  },
-  created: function(){
   },
   computed: {
     left: function() {

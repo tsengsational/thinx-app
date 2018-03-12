@@ -46,23 +46,31 @@
         }
       }
     },
-    mounted: function () {
-      // calculate distance required to center .carousel
-      let centerImage = () => {
+    created: function() {
+      window.addEventListener('resize', ()=> {
+        this.centerImage()
+      })
+    },
+    mounted: function() {
+      var self = this
+      setTimeout(function () {
+        self.centerImage()
+      }, 10);
+    },
+    updated: function () {
+      this.centerImage()
+    },
+    methods: {
+      centerImage: function() {
         this.imageWidth = document.querySelector('.topPhoto>.photo>img').offsetWidth
         this.windowWidth = window.innerWidth
+        console.log('centering image', 'image width: ', this.imageWidth, 'window width: ', this.windowWidth)
         let centerMove = String( (this.windowWidth - this.imageWidth) / 2 ) + 'px'
         if (this.windowWidth <= 1000) {
           this.overrideStyle.left = centerMove
           this.overrideStyle.transition = "none"
         }
-      }
-      window.addEventListener('resize', ()=> {
-        centerImage()
-      })
-      centerImage()
-    },
-    methods: {
+      },
       handleCarouselClick: function (payload) {
         // get index from clicked button, translate carousel by index * width of image
         this.imageWidth = document.querySelector('.topPhoto>.photo>img').offsetWidth

@@ -83,9 +83,6 @@ export default {
     .image img {
       max-width: 100%;
     }
-    .product-description {
-      // left: calc(50% - 153px)
-    }
   }
 
   .product-container.landscape {
@@ -102,11 +99,9 @@ export default {
     text-align: left;
     position: relative;
     @include fontstack();
-    .product-link {
+    a.product-link {
       font-weight: 600;
-      a {
-        color: $black;
-      }
+      color: $black;
     }
     .product-type {
       font-size: 12px;
