@@ -57,9 +57,6 @@
         self.centerImage()
       }, 10);
     },
-    updated: function () {
-      this.centerImage()
-    },
     methods: {
       centerImage: function() {
         this.imageWidth = document.querySelector('.topPhoto>.photo>img').offsetWidth
@@ -102,12 +99,14 @@
         let zoomedPhoto = document.querySelectorAll('.topPhoto')[payload.index]
         let photoWidth = zoomedPhoto.firstElementChild.scrollWidth
         let windowWidth = window.innerWidth
+        console.log("photo: ", photoWidth, "window: ", windowWidth)
         this.zoomLeft = parseInt( (windowWidth - photoWidth) / 2 )
         zoomedPhoto.classList.contains('zoom') ? zoomedPhoto.scrollIntoView() : null
 
         // when zooming out, resets scroll to top of page
         if(this.isZoom === false) {
           window.scrollTo(0, 0)
+          this.centerImage()
         }
       }
     }
